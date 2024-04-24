@@ -4,12 +4,15 @@
 
 body {
   margin: 0;
-  background-color: #191a1b;
+  background-color: #000000;
   height: 100%;
-  font-family: "GT America Standard", sans-serif;
+  font-family: "GT America Trial", sans-serif;
   font-size: 20px;
   line-height: 24px;
+  font-style: normal;
+  font-weight: 300;
   color: #191a1b;
+  vertical-align: middle;
 }
 
 .container {
@@ -28,11 +31,20 @@ body {
   font-size: 24px;
 }
 
+.navigation__inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 90%;
+  justify-content: space-between;
+}
+
 .navigation__group {
   display: flex;
   list-style: none;
   align-items: center;
   margin-block: 0;
+  padding: 0;
 }
 .logo {
   display: flex;
@@ -52,6 +64,7 @@ body {
   margin-left: 1rem;
   padding: 6px 22px;
   border-radius: 8px;
+  line-height: 2.25rem;
 }
 .submit-a-request {
   border: 1px solid #fff;
@@ -82,6 +95,7 @@ body {
 .hero__title {
   font-size: 80px;
   letter-spacing: -4px;
+  font-weight: 400;
   margin: 0 0 1rem;
   line-height: 1.5;
 }
@@ -198,9 +212,11 @@ body {
   padding-bottom: 100px;
   display: flex;
   position: relative;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 .footer__content {
-  width: 15%;
+  width: 20%;
 }
 .footer__title {
   font-size: 24px;
@@ -242,14 +258,11 @@ body {
   position: fixed;
   bottom: 0.625rem;
   right: 1.25rem;
-  padding: 0.92857rem 1.57143rem;
-
-  width: 6.75rem;
+  padding: 13px 22px;
   height: 3.125rem;
   border-radius: 999rem;
   font-size: 1.07143rem;
   font-weight: 700;
-  line-height: 0.625rem;
   background-color: #4c5fd5;
   color: #fff;
   fill: #ffffff;
@@ -262,4 +275,5 @@ body {
 }
 .btn__icon {
   padding-right: 0.57143rem;
+  height: 20px;
 }
