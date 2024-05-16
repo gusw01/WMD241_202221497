@@ -1,0 +1,112 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-size: 18px;
+  line-height: 150%;
+}
+.btn {
+  cursor: pointer;
+  max-width: fit-content;
+  padding-inline: 16px;
+  padding-block: 8px 10px;
+  font-size: 14px;
+  line-height: 14px;
+  background-color: oklch(0.4 0.1 150);
+  color: oklch(0.9 0.1 150);
+  text-transform: capitalize;
+  border-radius: 1024px;
+  //for dev
+  margin-top: 20px;
+  transition: all 1000ms ease-out;
+
+  &:hover {
+    background-color: oklch(0.4 0.1 240);
+    color: oklch(0.9 0.1 240);
+    transition: all 1000ms ease-out;
+  }
+
+  &--type {
+    &-elevated {
+      background-color: oklch(0.9 0.0025 150);
+      color: oklch(0.45 0.1 150);
+      box-shadow: 0rem 0.25rem 0.25rem 0rem rgba($color: #000000, $alpha: 0.4);
+      &:hover {
+        background-color: oklch(0.9 0.0025 240);
+        color: oklch(0.45 0.1 240);
+        box-shadow: 0rem 0.025rem 0.025rem 0rem
+          rgba($color: #000000, $alpha: 0.4);
+      }
+    }
+
+    &-tonal {
+      background-color: oklch(0.8 0.05 150);
+      color: oklch(0.3 0.1 150);
+    }
+    &-outline {
+      background-color: unset;
+      color: oklch(0.4 0.1 150);
+      border: 0.0625rem solid oklch(0.5 0 150);
+    }
+    &-text {
+      padding-inline: 12px;
+      background-color: unset;
+      color: oklch(0.4 0.1 150);
+      &:hover {
+        background-color: unset;
+        color: oklch(1 0 150);
+        animation-name: rainbow;
+        animation-duration: 5000ms;
+        animation-iteration-count: 4;
+        animation-direction: alternate;
+        animation-fill-mode: both;
+      }
+    }
+  }
+}
+
+// @keyframes rainbow {
+//   0% {
+//     background-color: oklch(0.5 0.2 0);
+//     transform: translate(0rem 0rem);
+//   }
+//   25% {
+//     transform: translate(1rem 0rem);
+//   }
+//   50% {
+//     transform: translate(1rem 1rem);
+//   }
+//   75% {
+//     transform: translate(0rem 1rem);
+//   }
+//   100% {
+//     background-color: oklch(0.5 0.2 240);
+//     transform: translate(0rem 0rem);
+//   }
+// }
+@keyframes rainbow {
+  0% {
+    background-color: oklch(0.5 0.2 0);
+    transform: translate(0rem, 0rem);
+  }
+
+  25% {
+    transform: translate(1rem, 0rem);
+  }
+
+  50% {
+    transform: translate(1rem, 1rem);
+  }
+
+  75% {
+    transform: translate(0rem, 1rem);
+  }
+
+  100% {
+    background-color: oklch(0.5 0.2 240);
+    transform: translate(0rem, 0rem);
+  }
+}
